@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-import Calculator from './src/screen/calculator';
+import React from 'react';
+import ShoppingCart from './src/ShoppingCart';
+import {Provider} from 'react-redux';
+import store from './src/store';
 
-export default class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <Calculator/>
+      <Provider store={store}>
+        <ShoppingCart />
+      </Provider>
     );
   }
 }
+export default App;
